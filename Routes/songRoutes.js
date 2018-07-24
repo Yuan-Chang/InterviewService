@@ -12,7 +12,7 @@ module.exports = app => {
         var query = req.query;
         var start = query.start < 0? 0:query.start;
         var limit = query.limit;
-        var end = (+start + +limit) < fullList.length ? query.limit : fullList.length;
+        var end = (+start + +limit) < fullList.length ? (+start + +limit) : fullList.length;
 
         for(var i=start; i< end; i++)
         {
